@@ -1,4 +1,4 @@
-import mongoose, { Schema, model, Document, models, Date } from "mongoose";
+import  { Schema, model, Document, models } from "mongoose";
 
 export interface IStreamProps extends Document {
     _id:Schema.Types.ObjectId;
@@ -70,4 +70,3 @@ const StreamData = models.StreamData || model('StreamData', StreamDataSchema);
 
 export default StreamData;
 
-// export default mongoose.model<IStreamProps>('StreamData', StreamDataSchema);
