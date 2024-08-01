@@ -31,7 +31,7 @@ const UserPage = async ( {params}:userPageProps) => {
 
   return (
     <div className='h-full  '>
-       user: {user.displayName} {''}
+       user name: {user.displayName} {''}
        id: {userId} {''}
        isFollowing: {`${isFollowing }`}
        isBlocked: {`${isBlocked }`}
