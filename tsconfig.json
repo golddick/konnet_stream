@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/auth.ts", "lib/Api/Actions/login.action.js", "app/(creatorPanel)/Dashboard/[displayName]/Chat/page.jsx", "app/(creatorPanel)/Dashboard/[displayName]/Key/_component/KeyBox.jsx", "app/(creatorPanel)/Dashboard/[displayName]/Key/_component/UrlCard.jsx"],
   "exclude": ["node_modules"]
 }
