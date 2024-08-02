@@ -94,6 +94,7 @@ export const updateStream = async (values: Partial<IStreamProps>) => {
             desc:values.desc,
             price: values.price,
             isFree: values.isFree,
+            isLive:false,
             participant: values.participant,
             organizers: values.organizers,
             accBank: values.accBank,
@@ -120,6 +121,7 @@ export const updateStream = async (values: Partial<IStreamProps>) => {
                 'streamData.$.desc': updatedStream.desc,
                 'streamData.$.price': updatedStream.price,
                 'streamData.$.isFree': updatedStream.isFree,
+                'streamData.$.isLive': updatedStream.isLive,
                 'streamData.$.participant': updatedStream.participant,
                 'streamData.$.organizers': updatedStream.organizers,
                 'streamData.$.accBank': updatedStream.accBank,
@@ -132,37 +134,7 @@ export const updateStream = async (values: Partial<IStreamProps>) => {
 
 
 
-         
-// try {
 
-         
-//     const updateUserStream = await User.findOneAndUpdate(
-//         { _id: userId, 'streamData._id': userId },
-//         {
-//             $set: {
-//                 streamData: {
-//                     _id: updatedStream._id,
-//                     streamName: updatedStream.streamName,
-//                     address: updatedStream.address,
-//                     desc: updatedStream.desc,
-//                     price: updatedStream.price,
-//                     isFree: updatedStream.isFree,
-//                     participant: updatedStream.participant,
-//                     organizers: updatedStream.organizers,
-//                     accBank: updatedStream.accBank,
-//                     accName: updatedStream.accName,
-//                     accNumber: updatedStream.accNumber,
-//                 }
-//             }
-//         },
-//         { new: true } // This ensures the returned document is the updated one
-//     );
-    
-// } catch (error) {
-//     console.log(error)
-// }
-    
-     
 
         revalidatePath(`/Dashboard/${loggedInUser.displayName}/Panel`)
         revalidatePath(`/Dashboard/${loggedInUser.displayName}`)

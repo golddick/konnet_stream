@@ -12,7 +12,7 @@ const HomeSideBar = async () => {
   const recommended = await getRecommended()
   const follows = await getFollowedUsers()
 
-  console.log('follows',recommended[0].streamData[0].creatorName)
+  // console.log('follows',follows[0].streamData[0].isLive)
   return (
     <Wrapper>
       <ToggleSidebar/>

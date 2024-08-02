@@ -15,7 +15,7 @@ const Follows = ({data}:FollowsProps) => {
     const {collapsed} = useSidebar((state) => state)
 
     const showLabel = !collapsed && data.length > 0;
-
+    
 
   return (
     <div>
@@ -27,7 +27,7 @@ const Follows = ({data}:FollowsProps) => {
         
         <ul>
             {data.map(user => (
-                   <UserItem key={user._id.toString()}  displayName={user.displayName}  imageURL={user.imageUrl} isLive={user.isLive}  />
+                   <UserItem key={user._id.toString()}  displayName={user.displayName}  imageURL={user.imageUrl} isLive={user.streamData[0].isLive}  />
             ))}
         </ul>
 
